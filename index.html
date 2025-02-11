@@ -1,18 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
-<title>Ballettschulen in Frankfurt</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ballettschulen Übersicht</title>
+<style>h1{font-size:2.5rem;font-weight:700;color:#5d7293;margin-bottom:20px}h2{font-size:1.5rem;font-weight:600;color:#5a5a5a;margin-top:40px;margin-bottom:15px;border-bottom:2px solid darkred;padding-bottom:5px}p{font-size:1.1rem;color:#444;margin-bottom:15px}ul{list-style-type:disc;margin-left:20px}ul li{margin-bottom:8px}</style>
 
-<style>h1{font-size:2.5rem;font-weight:700;color:#5d7293;margin-bottom:20px}h2{font-size:1.5rem;font-weight:600;color:#5a5a5a;margin-top:40px;margin-bottom:15px;border-bottom:2px solid darkred;padding-bottom:5px}p{font-size:1.1rem;color:#444;margin-bottom:15px}ul{list-style-type:disc;margin-left:20px}ul li{margin-bottom:8px}</style><style>body{font-family:Arial,sans-serif;margin:20px;padding:0;background-color:#f9f9f9;color:#333;max-width:1200px;margin:0 auto;padding:20px}table{width:100%;border-collapse:collapse;background:#fff;box-shadow:0 2px 10px rgb(0 0 0 / .1);border-radius:8px;overflow:hidden}th{background-color:#dcdcdc;color:#000;padding:12px;text-align:left;font-weight:700}td{padding:10px;border-bottom:1px solid #ddd}tbody tr:nth-child(even){background-color:#f2f2f2}tbody tr:hover{background-color:#e0e0e0}a{color:#07c;text-decoration:none}a:hover{text-decoration:underline}@media (max-width:768px){table{font-size:14px}th,td{padding:8px}#map{height:400px}}</style><link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" /><script src="https://unpkg.com/leaflet/dist/leaflet.js"></script><style>#map{height:500px;width:100%;margin-top:20px;border:1px solid #ccc}</style>
+<style>body{font-family:Arial,sans-serif;margin:20px;padding:0;background-color:#f9f9f9;color:#333;max-width:1200px;margin:0 auto;padding:20px}table{width:100%;border-collapse:collapse;background:#fff;box-shadow:0 2px 10px rgb(0 0 0 / .1);border-radius:8px;overflow:hidden}th{background-color:#dcdcdc;color:#000;padding:12px;text-align:left;font-weight:700}td{padding:10px;border-bottom:1px solid #ddd}tbody tr:nth-child(even){background-color:#f2f2f2}tbody tr:hover{background-color:#e0e0e0}a{color:#07c;text-decoration:none}a:hover{text-decoration:underline}@media (max-width:768px){table{font-size:14px}th,td{padding:8px}#map{height:400px}}</style>
 
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" /><script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<style>#map{height:500px;width:100%;margin-top:20px;border:1px solid #ccc}</style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .table-container {
+            display: block;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .cards-container {
+            display: none;
+        }
+        .card {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        @media screen and (max-width: 768px) {
+            .table-container {
+                display: none;
+            }
+            .cards-container {
+                display: block;
+            }
+        }
+    </style>
+
+<style>
+.card p {
+    margin: 4px 0;
+}
+</style>
 </head>
 <body>
 
-<h1>Ballettschulen in Frankfurt – Finde Deinen perfekten Ballettkurs</h1>
+
+<h1>Ballettschulen in Frankfurt </h1>
+<h2>Finde Deinen perfekten Ballettkurs</h2>
 
 <p>Du suchst eine <strong>Ballettschule in Frankfurt</strong>? <br>Egal ob für Kinder, Jugendliche oder Erwachsene – hier findest du eine Liste der besten Schulen in deiner Nähe. Mit unserer interaktiven Karte kannst du sofort erkennen, welche Ballettschule am besten zu dir passt.</p>
 <br>
-<img src="https://www.ballettstudio-ost.de/img/passende-ballett-schule-finden.webp" alt="Passende Ballettschule finden" title="Ballettschule finden" width="300" height="300" style="border-radius: 15px; box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); " fetchpriority="high"><br>
+<img src="https://www.ballettstudio-ost.de/img/passende-ballett-schule-finden.webp" alt="Passende Ballettschule finden" title="Ballettschule finden" width="350" height="350" style="border-radius: 15px; box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); " fetchpriority="high"><br>
 		
 <br>
 
@@ -30,10 +82,12 @@
 </ul>
 
 <h2>Überblick über die bekanntesten Ballettschulen in Frankfurt</h2>
-<p>Hier findest du eine Liste der renommiertesten Ballettschulen in Frankfurt mit wichtigen Informationen wie Adresse, Kursangebote und Preisstruktur.</p><br>
+<p>Hier findest du eine Liste der bekannteren Ballettschulen in Frankfurt mit wichtigen Informationen wie Adresse, Kursangebote und Preisstruktur.
+Die Sortierung erfolgt anhand der vorhandenen Google Bewertungen (Stand 11.02.2025).</p><br>
 
 
-<table>
+    <div class="table-container">
+        <table>
   <thead>
     <tr>
       <th>Name</th>
@@ -142,8 +196,124 @@
 
   </tbody>
 </table>
+    </div>
+    
+    <div class="cards-container">
+        <div class="card">
+            <h3>1. Ballettstudio Ost, Ballettschule Frankfurt</h3>
+      <p>Adresse: Hanauer Landstraße 138, 60314 Frankfurt</p>
+      <p>Telefon: +49 69 29721499</p>
+      <p>Kosten: Ab 50 €/Monat</p>
+      <p>Bewertung: 5.0 / 69 Bewertungen</p>
+      <p>E-Mail: <a href="mailto:info@ballettstudio-ost.de">info@ballettstudio-ost.de</a></p>
+      <p><a href="https://www.ballettstudio-ost.de" target="_blank">Website</a></p>
+        </div>
+
+        <div class="card">
+            <h3>2. Ianeta Dilova Ballettunterricht</h3>
+      <p>Adresse: Mörfelder Landstraße 45A, 60598 Frankfurt</p>
+      <p>Telefon:+49 69 63307949</p>
+      <p>Kosten: Ab 45 €/Monat</p>
+      <p>Bewertung: 4.5 / 31 Bewertungen</p>
+      <p>E-Mail: <a href="mailto:ianeta.dilova@t-online.de">ianeta.dilova@t-online.de</a></p>
+      <p><a href="http://www.ballett-ianeta-dilova.de/" rel="nofollow" target="_blank">Website</a></p>
+        </div>
+
+
+        <div class="card">
+            <h3>3. Ballett- und Tanzschule Anastasia Dirksen</h3>
+      <p>Adresse: Ohmstraße 44, 60486 Frankfurt am Main</p>
+      <p>Telefon: +49 69 15619767</p>
+      <p>Kosten: Ab 50 €/Monat</p>
+      <p>Bewertung: 4.4 / 26 Bewertungen</p>
+      <p>E-Mail: <a href="mailto:info@ballett-und-tanzschule-anastasia.com">info@ballett-und-tanzschule-anastasia.com</a></p>
+      <p><a href="http://www.ballett-und-tanzschule-anastasia.com/" rel="nofollow" target="_blank">Website</a></p>
+        </div>
+
+
+        <div class="card">
+            <h3>4. Ballett & Tanzstudio Balzer</h3>
+      <p>Adresse: Gartenstr. 84, 60596 Frankfurt am Main</p>
+      <p>Telefon:+49 69 624798</p>
+      <p>Kosten: Ab ca. 44 €/Monat</p>
+      <p>Bewertung:4.7 / 15 Bewertungen</p>
+      <p>E-Mail: <a href="mailto:kontakt@ballett-tanzstudio-balzer.de">kontakt@ballett-tanzstudio-balzer.de</a></p>
+      <p><a href="https://www.ballett-tanzstudio-balzer.de/" rel="nofollow" target="_blank">Website</a></p>
+        </div>
+
+        <div class="card">
+            <h3>5. Ballett- und Tanzschule DO-ballet</h3>
+      <p>Adresse: Leipziger Straße 17a, 60487 Frankfurt am Main</p>
+      <p>Telefon: +49 176 438 69386</p>
+      <p>Kosten: Ab 49 €/Monat</p>
+      <p>Bewertung: 5.0 / 11 Bewertungen</p>
+      <p>E-Mail: <a href="mailto:daria@do-ballet.com">daria@do-ballet.com</a></p>
+      <p><a href="https://do-ballet.com/" rel="nofollow" target="_blank">Website</a></p>
+        </div>
+
+
+
+        <div class="card">
+            <h3>6. Kinderballett Frankfurt</h3>
+      <p>Adresse: Hartmann-Ibach-Straße 108, 60389 Frankfurt</p>
+      <p>Telefon: +49 69 15345257</p>
+      <p>Kosten: 45 €/Monat</p>
+      <p>Bewertung: 4.7 / 7 Bewertungen</p>
+      <p>E-Mail: <a href="mailto:ol@kinderballett-frankfurt.de">ol@kinderballett-frankfurt.de</a></p>
+      <p><a href="https://kinderballett-frankfurt.de/" target="_blank">Website</a></p>
+        </div>
+
+
+
+        <div class="card">
+            <h3>7. Tanzstudio Constanza</h3>
+      <p>Adresse: Pfingstweidstraße 4, 60316 Frankfurt</p>
+      <p>Telefon: +49 174 4602786</p>
+      <p>Kosten: Ab 50 €/Monat</p>
+      <p>Bewertung: 5.0 / 6 Bewertungen</p>
+      <p>E-Mail: <a href="mailto:info@tanzstudio-constanza.de">info@tanzstudio-constanza.de</a></p>
+      <p><a href="http://tanzstudio-constanza.de/" rel="nofollow" target="_blank">Website</a></p>
+        </div>
+
+
+        <div class="card">
+            <h3>8. Ballett im Hof - Ballettschule Frankfurt</h3>
+      <p>Adresse: Westerbachstraße 50 60489 Frankfurt am Main</p>
+      <p>Telefon: +49 69 307368</p>
+      <p>Kosten: Ab 44 €/Monat</p>
+      <p>Bewertung: 4.8 / 4 Bewertungen</p>
+      <p>E-Mail: <a href="mailto:ballettimhof@gmx.de">ballettimhof@gmx.de</a></p>
+      <p><a href="https://www.ballett-im-hof.de/" rel="nofollow" target="_blank">Website</a></p>
+        </div>
+
+
+        <div class="card">
+            <h3>9. Frankfurt City Ballet</h3>
+      <p>Adresse: Kurfürstenstraße 60, 60486 Frankfurt am Main</p>
+      <p>Telefon: +49 176 80331708</p>
+      <p>Kosten: Ab 45 €/Monat</p>
+      <p>Bewertung: 5.0 / 3 Bewertungen</p>
+      <p>E-Mail: <a href="mailto:info@frankfurtcityballet.de">info@frankfurtcityballet.de</a></p>
+      <p><a href="https://www.frankfurtcityballet.de/" rel="nofollow" target="_blank">Website</a></p>
+        </div>
+
+
+        <div class="card">
+            <h3>10. Balletboutique</h3>
+      <p>Adresse: Adickesallee 43, 60322 Frankfurt am Main</p>
+      <p>Telefon: +49 69 98972759</p>
+      <p>Kosten: Ab 69 €/Monat</p>
+      <p>Bewertung: 5.0 / 2 Bewertungen</p>
+      <p>E-Mail: <a href="mailto:	info@balletboutique.de">info@balletboutique.de</a></p>
+      <p><a href="https://balletboutique.de/" rel="nofollow" target="_blank">Website</a></p>
+        </div>
+    </div>
+
 <br><br>
- <div id="map"></div>
+
+
+
+ <div id="map"></div></div>
 
     <script>
         var map = L.map('map').setView([50.1109, 8.6821], 12);
