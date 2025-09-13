@@ -3,280 +3,859 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ballettschulen Übersicht</title>
-<link rel="canonical" href="https://ballettschulen-frankfurt.onrender.com">
-<meta name="google-site-verification" content="5LcFTtcKFIzlmkvEyL8pwdoC1tP-wGD9rGRqfjbRR_s" />
-	<style>h1{font-size:2.5rem;font-weight:700;color:#5d7293;margin-bottom:20px}h2{font-size:1.5rem;font-weight:600;color:#5a5a5a;margin-top:40px;margin-bottom:15px;border-bottom:2px solid darkred;padding-bottom:5px}p{font-size:1.1rem;color:#444;margin-bottom:15px}ul{list-style-type:disc;margin-left:20px}ul li{margin-bottom:8px}</style>
-<style>body{font-family:Arial,sans-serif;margin:20px;padding:0;background-color:#f9f9f9;color:#333;max-width:1200px;margin:0 auto;padding:20px}table{width:100%;border-collapse:collapse;background:#fff;box-shadow:0 2px 10px rgb(0 0 0 / .1);border-radius:8px;overflow:hidden}th{background-color:#dcdcdc;color:#000;padding:12px;text-align:left;font-weight:700}td{padding:10px;border-bottom:1px solid #ddd}tbody tr:nth-child(even){background-color:#f2f2f2}tbody tr:hover{background-color:#e0e0e0}a{color:#07c;text-decoration:none}a:hover{text-decoration:underline}@media (max-width:768px){table{font-size:14px}th,td{padding:8px}#map{height:400px}}</style>
+    <title>Die besten Ballettschulen in Frankfurt 2025 | Kompletter Guide</title>
+    <meta name="description" content="Finden Sie die perfekte Ballettschule in Frankfurt! Vergleichen Sie 10+ Schulen mit Preisen, Bewertungen und Kursangeboten für Kinder und Erwachsene.">
+    <meta name="keywords" content="Ballettschule Frankfurt, Ballett lernen Frankfurt, Tanzschule Frankfurt, Ballett für Kinder Frankfurt, Ballett Erwachsene Frankfurt">
+    <link rel="canonical" href="https://ballettschulen-frankfurt.onrender.com/">
+    <meta property="og:title" content="Die besten Ballettschulen in Frankfurt 2025">
+    <meta property="og:description" content="Kompletter Guide zu Ballettschulen in Frankfurt mit Preisen, Bewertungen und Kursangeboten">
+    <meta property="og:type" content="website">
 <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-<style>#map{height:500px;width:100%;margin-top:20px;border:1px solid #ccc}</style>
-<style>body{font-family:Arial,sans-serif}.table-container{display:block}table{width:100%;border-collapse:collapse}th,td{border:1px solid #ddd;padding:8px;text-align:left}th{background-color:#f4f4f4}.cards-container{display:none}.card{border:1px solid #ddd;padding:20px;margin:30px 0;border-radius:5px;background-color:#f9f9f9}@media screen and (max-width:768px){.table-container{display:none}.cards-container{display:block}}</style><style>.card p{margin:4px 0}</style>
+<style>#map{height:500px;width:100%;margin-top:20px;border:1px solid #ccc}</style>    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 60px 0;
+            color: white;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+        
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+        
+        .stat {
+            text-align: center;
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            display: block;
+        }
+        
+        .main-content {
+            background: white;
+            margin: -50px 20px 0;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 10;
+        }
+        
+        .content-section {
+            padding: 60px 40px;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #ff6b35, #f7931e);
+            border-radius: 2px;
+        }
+        
+        .intro-text {
+            font-size: 1.2rem;
+            color: #555;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px;
+            line-height: 1.8;
+        }
+        
+        .criteria-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+        
+        .criteria-card {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+        
+        .criteria-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .criteria-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #333333, #555555);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .school-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+        
+        .school-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #f0f0f0;
+            position: relative;
+        }
+        
+        .school-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+        }
+        
+        .school-header {
+            background: linear-gradient(135deg, #2c2c2c, #444444);
+            color: white;
+            padding: 25px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .school-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            transform: translate(30px, -30px);
+        }
+        
+        .school-name {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .school-rating {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .stars {
+            color: #ffd700;
+            font-size: 1.2rem;
+        }
+        
+        .school-body {
+            padding: 25px;
+        }
+        
+        .school-info {
+            margin-bottom: 15px;
+        }
+        
+        .info-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+        }
+        
+        .info-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #ff6b3520, #f7931e20);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: #ff6b35;
+        }
+        
+        .price-badge {
+            background: linear-gradient(135deg, #333333, #555555);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            display: inline-block;
+            margin: 15px 0;
+            font-size: 0.9rem;
+        }
+        
+        .contact-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+        }
+        
+        .contact-btn:hover {
+            background: linear-gradient(135deg, #f7931e, #ff6b35);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 107, 53, 0.4);
+        }
+        
+        .faq-section {
+            background: #f8f9fa;
+            margin-top: 50px;
+        }
+        
+        .faq-item {
+            background: white;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .faq-question {
+            background: linear-gradient(135deg, #ff6b3510, #f7931e10);
+            padding: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            color: #2c3e50;
+            border: none;
+            width: 100%;
+            text-align: left;
+            font-size: 1.1rem;
+            transition: background 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-question:hover {
+            background: linear-gradient(135deg, #ff6b3520, #f7931e20);
+        }
+        
+        .faq-arrow {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            color: #555;
+            line-height: 1.7;
+        }
+        
+        .faq-answer.open {
+            padding: 20px;
+            max-height: 300px;
+        }
+        
+        .faq-answer.open + .faq-question .faq-arrow {
+            transform: rotate(180deg);
+        }
+        
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 50px;
+        }
+        
+        .footer-links {
+            margin-bottom: 20px;
+        }
+        
+        .footer-links a {
+            color: #ecf0f1;
+            text-decoration: none;
+            margin: 0 20px;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #ff6b35;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-stats {
+                gap: 20px;
+            }
+            
+            .school-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .content-section {
+                padding: 40px 20px;
+            }
+            
+            .main-content {
+                margin: -30px 10px 0;
+            }
+        }
+    </style>
 </head>
 <body>
-
-
-<h1>Ballettschulen in Frankfurt </h1>
-<h2>Finde Deinen perfekten Ballettkurs</h2>
-
-<p>Du suchst eine <strong>Ballettschule in Frankfurt</strong>? <br>Egal ob für Kinder, Jugendliche oder Erwachsene – hier findest du eine Liste der besten Schulen in deiner Nähe. Mit unserer interaktiven Karte kannst du sofort erkennen, welche Ballettschule am besten zu dir passt.</p>
-<br>
-<img src="top-ballettschulen-frankfurt.webp" alt="Passende Ballettschule finden" title="Ballettschule finden" width="350" height="350" style="border-radius: 15px; box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); " fetchpriority="high"><br>
-		
-<br>
-
-
-
-<h2>Welche Ballettschule in Frankfurt ist die beste für dich?</h2>
-<p>Die Wahl der richtigen Ballettschule hängt von vielen Faktoren ab:</p>
-<ul>
-  <li>Passendes Alter und Erfahrungslevel – Anfänger oder Fortgeschrittene?</li>
-  <li>Der persönlichen Chemie zwischen Lehrer & Schüler</li>
-  <li>Der Expertise des Ballettlehrers (Profi?; Ballettpädagoge?)
-  <li>Ballettstil – Klassisches Ballett, Spitzentanz oder moderner Tanz?</li>
-  <li>Standort – Nähe zum Wohnort oder zur Schule?</li>
-  <li>Preise – Wie hoch sind die monatlichen Kosten?</li>
-</ul>
-
-<h2>Überblick über die bekanntesten Ballettschulen in Frankfurt</h2>
-<p>Hier findest du eine Liste der bekannteren Ballettschulen in Frankfurt mit wichtigen Informationen wie Adresse, Kursangebote und Preisstruktur.</p>
-<p>Die Auswahl basiert in erster Linie auf der Anzahl der Google-Bewertungen (Stand: 11. Februar 2025). <nr></nr>Darüber hinaus lag der Fokus auf Schulen, die sich klar dem klassischen Ballett widmen. Einrichtungen, die Ballett lediglich als Teil eines breiteren Angebots aus Schauspiel, Gesang, Yoga oder Coaching anbieten, wurden nicht berücksichtigt.
-</p>
-<br><br>
-<p>Ein weiteres wichtiges Kriterium war der persönliche Eindruck vor Ort. Dabei spielten Faktoren wie die Atmosphäre, die Qualität des Unterrichts und die fachliche Kompetenz der Lehrkräfte eine Rolle.
-</p>
-<p>Diese Liste soll dir helfen, eine fundierte Entscheidung zu treffen, wenn du auf der Suche nach einer hochwertigen Ballettausbildung in Frankfurt bist.</p>
-<p></p></p><br><br><p></p>
-
-	
-    <div class="table-container">
-        <table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Adresse</th>
-      <th>Telefonnummer</th>
-      <th>Preis (Beispiel)</th>
-      <th>Bewertung Google (Stand 10.02.25)</th>
-      <th>E-Mail</th>
-      <th>Website</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Ballettstudio Ost, Ballettschule Frankfurt</td>
-      <td>Hanauer Landstraße 138, 60314 Frankfurt</td>
-      <td>+49 69 29721499</td>
-      <td>Ab 50 €/Monat</td>
-      <td>5.0 / 81 Bewertungen</td>
-      <td><a href="mailto:info@ballettstudio-ost.de">info@ballettstudio-ost.de</a></td>
-      <td><a href="https://www.ballettstudio-ost.de" target="_blank">Website</a></td>
-    </tr>
-    <tr>
-      <td>Ianeta Dilova Ballettunterricht</td>
-      <td>Mörfelder Landstraße 45A, 60598 Frankfurt</td>
-      <td>+49 69 63307949</td>
-      <td>Ab 45 €/Monat</td>
-      <td>4.5 / 33 Bewertungen</td>
-      <td><a href="mailto:ianeta.dilova@t-online.de">ianeta.dilova@t-online.de</a></td>
-      <td><a href="http://www.ballett-ianeta-dilova.de" rel="nofollow" target="_blank">Website</a></td>
-    </tr>
-    <tr>
-      <td>Ballett- und Tanzschule Anastasia Dirksen</td>
-      <td>Ohmstraße 44, 60486 Frankfurt am Main</td>
-      <td>+49 69 15619767</td>
-      <td>Ab 50 €/Monat</td>
-      <td>4.4 / 36 Bewertungen</td>
-      <td><a href="mailto:info@ballett-und-tanzschule-anastasia.com">info@ballett-und-tanzschule-anastasia.com</a></td>
-      <td><a href="http://www.ballett-und-tanzschule-anastasia.com" rel="nofollow" target="_blank">Website</a></td>
-    </tr>
-    <tr>
-      <td>Ballett & Tanzstudio Balzer</td>
-      <td>Gartenstr. 84, 60596 Frankfurt am Main</td>
-      <td>+49 69 624798</td>
-      <td>Ab ca. 44 €/Monat</td>
-      <td>4.8 / 16 Bewertungen</td>
-      <td><a href="mailto:kontakt@ballett-tanzstudio-balzer.de">kontakt@ballett-tanzstudio-balzer.de</a></td>
-      <td><a href="https://www.ballett-tanzstudio-balzer.de/" rel="nofollow" target="_blank">Website</a></td>
-    </tr>
-    <tr>
-      <td>Ballett- und Tanzschule DO-ballet</td>
-      <td>Leipziger Straße 17a, 60487 Frankfurt am Main</td>
-      <td>+49 176 43869386</td>
-      <td>Ab 49 €/Monat</td>
-      <td>5.0 / 11 Bewertungen</td>
-      <td><a href="mailto:daria@do-ballet.com">daria@do-ballet.com</a></td>
-      <td><a href="https://do-ballet.com/" rel="nofollow" target="_blank">Website</a></td>
-    </tr>
-    <tr>
-      <td>Kinderballett Frankfurt</td>
-      <td>Hartmann-Ibach-Straße 108, 60389 Frankfurt</td>
-      <td>+49 69 15345257</td>
-      <td>45 €/Monat</td>
-      <td>4.7 / 7 Bewertungen</td>
-      <td><a href="mailto:ol@kinderballett-frankfurt.de">ol@kinderballett-frankfurt.de</a></td>
-      <td><a href="https://kinderballett-frankfurt.de" target="_blank">Website</a></td>
-    </tr>
-    <tr>
-      <td>Tanzstudio Constanza</td>
-      <td>Pfingstweidstraße 4, 60316 Frankfurt</td>
-      <td>0174 4602786</td>
-      <td>Ab 50 €/Monat</td>
-      <td>5.0 / 6 Bewertungen</td>
-      <td><a href="mailto:info@tanzstudio-constanza.de">info@tanzstudio-constanza.de</a></td>
-      <td><a href="http://tanzstudio-constanza.de" rel="nofollow" target="_blank">Website</a></td>
-    </tr>
-    <tr>
-      <td>Ballett im Hof - Ballettschule Frankfurt</td>
-      <td>Westerbachstraße 50   60489 Frankfurt am Main</td>
-      <td>+49 69 307368 </td>
-      <td>Ab 44 €/Monat</td>
-      <td>4.8 / 4 Bewertungen</td>
-      <td><a href="mailto:ballettimhof@gmx.de">ballettimhof@gmx.de</a></td>
-      <td><a href="https://www.ballett-im-hof.de/" rel="nofollow" target="_blank">Website</a></td>
-    </tr>
-    <tr>
-      <td>Frankfurt City Ballet</td>
-      <td>Kurfürstenstraße 60, 60486 Frankfurt am Main</td>
-      <td>+49 176 80331708</td>
-      <td>Ab 45 €/Monat</td>
-      <td>5.0 / 4 Bewertungen</td>
-      <td><a href="mailto:info@frankfurtcityballet.de">info@frankfurtcityballet.de</a></td>
-      <td><a href="https://www.frankfurtcityballet.de" rel="nofollow" target="_blank">Website</a></td>
-    </tr>
-
-
-    <tr>
-      <td>Balletboutique</td>
-      <td>Adickesallee 43, 60322 Frankfurt am Main</td>
-      <td>+49 69 98972759</td>
-      <td>Ab 69 €/Monat</td>
-      <td>4.1 / 9 Bewertungen</td>
-      <td><a href="mailto:info@balletboutique.de">info@balletboutique.de</a></td>
-      <td><a href="https://balletboutique.de/" rel="nofollow" target="_blank">Website</a></td>
-    </tr>
-
-
-  </tbody>
-</table>
-Stand 26.08.2025    </div>
-    
-    <div class="cards-container">
-        <div class="card">
-            <h3>1. Ballettstudio Ost, Ballettschule Frankfurt</h3>
-      <p>Adresse: Hanauer Landstraße 138, 60314 Frankfurt</p>
-      <p>Telefon: +49 69 29721499</p>
-      <p>Kosten: Ab 50 €/Monat</p>
-      <p>Bewertung: 5.0 / 69 Bewertungen</p>
-      <p>E-Mail: <a href="mailto:info@ballettstudio-ost.de">info@ballettstudio-ost.de</a></p>
-      <p><a href="https://www.ballettstudio-ost.de" target="_blank">Website</a></p>
+    <header>
+        <div class="container">
+            <nav>
+                <div style="text-align: center;">
+                    <h2 style="color: #ff6b35; margin: 0;">Ballettschulen Frankfurt</h2>
+                </div>
+            </nav>
         </div>
+    </header>
 
-        <div class="card">
-            <h3>2. Ianeta Dilova Ballettunterricht</h3>
-      <p>Adresse: Mörfelder Landstraße 45A, 60598 Frankfurt</p>
-      <p>Telefon:+49 69 63307949</p>
-      <p>Kosten: Ab 45 €/Monat</p>
-      <p>Bewertung: 4.5 / 31 Bewertungen</p>
-      <p>E-Mail: <a href="mailto:ianeta.dilova@t-online.de">ianeta.dilova@t-online.de</a></p>
-      <p><a href="http://www.ballett-ianeta-dilova.de/" rel="nofollow" target="_blank">Website</a></p>
-        </div>
+    <section class="hero">
+        <div class="container">
+            <h1>Die besten Ballettschulen in Frankfurt</h1>
+            <p>Finden Sie die perfekte Ballettschule für Ihre Bedürfnisse - von Kinderballett bis zum professionellen Training</p>
 
-
-        <div class="card">
-            <h3>3. Ballett- und Tanzschule Anastasia Dirksen</h3>
-      <p>Adresse: Ohmstraße 44, 60486 Frankfurt am Main</p>
-      <p>Telefon: +49 69 15619767</p>
-      <p>Kosten: Ab 50 €/Monat</p>
-      <p>Bewertung: 4.4 / 26 Bewertungen</p>
-      <p>E-Mail: <a href="mailto:info@ballett-und-tanzschule-anastasia.com">info@ballett-und-tanzschule-anastasia.com</a></p>
-      <p><a href="http://www.ballett-und-tanzschule-anastasia.com/" rel="nofollow" target="_blank">Website</a></p>
-        </div>
-
-
-        <div class="card">
-            <h3>4. Ballett & Tanzstudio Balzer</h3>
-      <p>Adresse: Gartenstr. 84, 60596 Frankfurt am Main</p>
-      <p>Telefon:+49 69 624798</p>
-      <p>Kosten: Ab ca. 44 €/Monat</p>
-      <p>Bewertung:4.7 / 15 Bewertungen</p>
-      <p>E-Mail: <a href="mailto:kontakt@ballett-tanzstudio-balzer.de">kontakt@ballett-tanzstudio-balzer.de</a></p>
-      <p><a href="https://www.ballett-tanzstudio-balzer.de/" rel="nofollow" target="_blank">Website</a></p>
-        </div>
-
-        <div class="card">
-            <h3>5. Ballett- und Tanzschule DO-ballet</h3>
-      <p>Adresse: Leipziger Straße 17a, 60487 Frankfurt am Main</p>
-      <p>Telefon: +49 176 438 69386</p>
-      <p>Kosten: Ab 49 €/Monat</p>
-      <p>Bewertung: 5.0 / 11 Bewertungen</p>
-      <p>E-Mail: <a href="mailto:daria@do-ballet.com">daria@do-ballet.com</a></p>
-      <p><a href="https://do-ballet.com/" rel="nofollow" target="_blank">Website</a></p>
-        </div>
-
-
-
-        <div class="card">
-            <h3>6. Kinderballett Frankfurt</h3>
-      <p>Adresse: Hartmann-Ibach-Straße 108, 60389 Frankfurt</p>
-      <p>Telefon: +49 69 15345257</p>
-      <p>Kosten: 45 €/Monat</p>
-      <p>Bewertung: 4.7 / 7 Bewertungen</p>
-      <p>E-Mail: <a href="mailto:ol@kinderballett-frankfurt.de">ol@kinderballett-frankfurt.de</a></p>
-      <p><a href="https://kinderballett-frankfurt.de/" target="_blank">Website</a></p>
-        </div>
-
-
-
-        <div class="card">
-            <h3>7. Tanzstudio Constanza</h3>
-      <p>Adresse: Pfingstweidstraße 4, 60316 Frankfurt</p>
-      <p>Telefon: +49 174 4602786</p>
-      <p>Kosten: Ab 50 €/Monat</p>
-      <p>Bewertung: 5.0 / 6 Bewertungen</p>
-      <p>E-Mail: <a href="mailto:info@tanzstudio-constanza.de">info@tanzstudio-constanza.de</a></p>
-      <p><a href="http://tanzstudio-constanza.de/" rel="nofollow" target="_blank">Website</a></p>
-        </div>
-
-
-        <div class="card">
-            <h3>8. Ballett im Hof - Ballettschule Frankfurt</h3>
-      <p>Adresse: Westerbachstraße 50 60489 Frankfurt am Main</p>
-      <p>Telefon: +49 69 307368</p>
-      <p>Kosten: Ab 44 €/Monat</p>
-      <p>Bewertung: 4.8 / 4 Bewertungen</p>
-      <p>E-Mail: <a href="mailto:ballettimhof@gmx.de">ballettimhof@gmx.de</a></p>
-      <p><a href="https://www.ballett-im-hof.de/" rel="nofollow" target="_blank">Website</a></p>
-        </div>
-
-
-        <div class="card">
-            <h3>9. Frankfurt City Ballet</h3>
-      <p>Adresse: Kurfürstenstraße 60, 60486 Frankfurt am Main</p>
-      <p>Telefon: +49 176 80331708</p>
-      <p>Kosten: Ab 45 €/Monat</p>
-      <p>Bewertung: 5.0 / 3 Bewertungen</p>
-      <p>E-Mail: <a href="mailto:info@frankfurtcityballet.de">info@frankfurtcityballet.de</a></p>
-      <p><a href="https://www.frankfurtcityballet.de/" rel="nofollow" target="_blank">Website</a></p>
-        </div>
-
-
-        <div class="card">
-            <h3>10. Balletboutique</h3>
-      <p>Adresse: Adickesallee 43, 60322 Frankfurt am Main</p>
-      <p>Telefon: +49 69 98972759</p>
-      <p>Kosten: Ab 69 €/Monat</p>
-      <p>Bewertung: 5.0 / 2 Bewertungen</p>
-      <p>E-Mail: <a href="mailto:	info@balletboutique.de">info@balletboutique.de</a></p>
-      <p><a href="https://balletboutique.de/" rel="nofollow" target="_blank">Website</a></p>
-        </div>
-    </div>
+<img src="https://ballettschulen-frankfurt.onrender.com/top-ballettschulen-frankfurt.webp" alt="Passende Ballettschule finden" title="Ballettschule finden" width="350" height="350" style="border-radius: 15px; box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); " fetchpriority="high"><br>
 
 <br><br>
+<div style="text-align: left;">
+<p>Frankfurt ist nicht nur eine Bankenstadt, sondern auch ein Ort für Kunst und Tanz. Wer hier Ballett lernen möchte, findet viele Schulen – von kleinen Studios bis zu großen Ausbildungsstätten.
 
+Ob Kinder erste Schritte wagen, Jugendliche Spitzentanz trainieren oder Erwachsene einfach Freude am Tanzen haben: In Frankfurt gibt es passende Angebote für jedes Alter und Niveau.
 
+In diesem Guide zeigen wir dir die wichtigsten Infos zu Kursen, Preisen und Schwerpunkten der Ballettschulen, damit du schnell die richtige Wahl treffen kannst.</p></div>
 
- <div id="map"></div></div>
+	            
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">10+</span>
+                    <span>Schulen verglichen</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">200+</span>
+                    <span>Bewertungen analysiert</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">Ab 44€</span>
+                    <span>Pro Monat</span>
+                </div>
+            </div>
+        </div><br><br>
+    </section>
+
+    <main class="main-content">
+        <section class="content-section">
+            <h2 class="section-title">Ihr Guide für Ballettschulen in Frankfurt</h2>
+            <p class="intro-text">
+                Frankfurt bietet eine vielfältige Ballettlandschaft für alle Altersgruppen und Niveaus. Unsere sorgfältig kuratierte Liste basiert auf Google-Bewertungen, persönlichen Besuchen und detaillierter Recherche, um Ihnen die beste Entscheidungsgrundlage zu bieten.
+            </p>
+
+            <div class="criteria-grid">
+                <div class="criteria-card">
+                    <div class="criteria-icon">⭐</div>
+                    <h3>Bewertungen & Reputation</h3>
+                    <p>Wir analysieren Google-Bewertungen, Erfahrungsberichte und den Ruf in der Tanzgemeinschaft Frankfurt.</p>
+                </div>
+                <div class="criteria-card">
+                    <div class="criteria-icon">👨‍🏫</div>
+                    <h3>Qualifizierte Lehrkräfte</h3>
+                    <p>Professionelle Ausbildung, pädagogische Erfahrung und kontinuierliche Weiterbildung der Ballettlehrer.</p>
+                </div>
+                <div class="criteria-card">
+                    <div class="criteria-icon">🏢</div>
+                    <h3>Ausstattung & Atmosphäre</h3>
+                    <p>Moderne Studios, Spiegelwände, professionelle Böden und eine inspirerende Lernumgebung.</p>
+                </div>
+                <div class="criteria-card">
+                    <div class="criteria-icon">💰</div>
+                    <h3>Preis-Leistung</h3>
+                    <p>Transparente Preisgestaltung, flexible Kursoptionen und das beste Verhältnis von Qualität zu Kosten.</p>
+                </div>
+
+		<div class="criteria-card">
+    		<div class="criteria-icon">🕒</div>
+    		<h3>Kursangebot & Flexibilität</h3>
+   		 <p>Vielfältige Klassen für Kinder, Jugendliche und Erwachsene, flexible Stundenpläne und die Möglichkeit, zwischen verschiedenen Niveaus zu 		wechseln.</p>
+	      </div>
+
+		<div class="criteria-card">
+    		<div class="criteria-icon">🎭</div>
+    		<h3>Auftritts- & Fördermöglichkeiten</h3>
+    		<p>Schüler haben die Chance, bei Aufführungen mitzuwirken, Bühnenerfahrung zu sammeln und ihr Talent durch Förderprogramme oder Wettbewerbe 		weiterzuentwickeln.</p>
+	      </div>        
+           </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Top Ballettschulen in Frankfurt</h2>
+            
+            <div class="school-grid">
+                <div class="school-card">
+                    <div class="school-header">
+
+                        <h3 class="school-name"><span style="font-size: 32px;">🥇</span> Platz 1<br>Ballettstudio Ost</h3>
+                        <div class="school-rating">
+                            <span class="stars">★★★★★</span>
+                            <span>5.0 (82 Bewertungen)</span>
+                        </div>
+                    </div>
+                    <div class="school-body">
+                        <div class="school-info">
+                            <div class="info-row">
+                                <div class="info-icon">📍</div>
+                                <span>Hanauer Landstraße 138, 60314 Frankfurt</span>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-icon">📞</div>
+                                <span>+49 69 29721499</span>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-icon">🌐</div>
+                                <span><a href="https://www.ballettstudio-ost.de" target="_blank" style="color: black;">Website</a></span>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-icon">🎯</div>
+                                <span>Kinder, Jugendliche, Erwachsene</span>
+                            </div>
+                        </div>
+                        <div class="price-badge">Ab 50 €/Monat</div>
+                        <p style="margin: 15px 0; color: #666; line-height: 1.6;">
+	Renommierte Ballettschule mit hervorragender Reputation. Bietet klassisches Ballett für alle Altersgruppen mit professionellen Lehrkräften.Eltern 	loben besonders die fachliche Kompetenz und pädagogische Hingabe der Lehrkräfte. <br><br>Ein häufig genannter Punkt ist die individuelle Förderung 	der Kinder, die nicht nur tänzerisch, sondern auch in ihrer Persönlichkeit wachsen. Die Atmosphäre im Studio wird als freundlich, familiär und 	unterstützend beschrieben. Viele Eltern betonen, dass ihre Kinder mit großer Freude und Vorfreude zum Unterricht gehen.<br><br>
+
+	Einige Eltern heben hervor, dass ihre Kinder durch den Unterricht nicht nur tänzerisch, sondern auch in ihrem Selbstvertrauen und ihrer Kreativität 	gestärkt wurden. Die regelmäßigen Aufführungen und kleinen Bühnenprojekte tragen zusätzlich zur positiven Entwicklung der Kinder bei.
+                        </p>
+                        <a href="mailto:info@ballettstudio-ost.de" class="contact-btn">Kontakt aufnehmen</a>
+                    </div>
+                </div>
+
+                <div class="school-card">
+                    <div class="school-header">
+                        <h3 class="school-name"><span style="font-size: 32px;">🥈</span> Platz 2<br> Ballettschule Janeta Dilova</h3>
+                        <div class="school-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span>4.5 (31 Bewertungen)</span>
+                        </div>
+                    </div>
+                    <div class="school-body">
+                        <div class="school-info">
+                            <div class="info-row">
+                                <div class="info-icon">📍</div>
+                                <span>Mörfelder Landstraße 45A, 60598 Frankfurt</span>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-icon">📞</div>
+                                <span>+49 69 63307949</span>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-icon">🌐</div>
+                                <span><a href="http://www.ballett-ianeta-dilova.de" rel="nofollow" target="_blank" style="color: black;">Website</a></span>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-icon">🎯</div>
+                                <span>Klassisches Ballett nach Waganowa</span>
+                            </div>
+                        </div>
+                        <div class="price-badge">Ab 45 €/Monat</div>
+                        <p style="margin: 15px 0; color: #666; line-height: 1.6;">
+	Professionelle Ballettausbildung mit langjähriger Erfahrung. Spezialisiert auf die russische Ballettmethodik nach Waganowa.
+	Bei Janeta Dilova loben viele, wie sie individuell auf die Schüler eingeht und dabei gleichzeitig hohe Qualität bietet. Sie wird beschrieben als 	warmherzig und leidenschaftlich, insbesondere im Unterricht für Ausdruck und Technik. <br><br>Mehrfach heißt es, man merkt, dass sie 		Professionalität und pädagogische Erfahrung kombiniert, also nicht nur tänzerisches Können, sondern auch gute Methodik. <br><br>Einige Bewertungen 	zeigen, dass Schüler trotz Vorerfahrungen oder unterschiedlichem Niveau spürbare Fortschritte machen. Insgesamt wirkt das Bild stark: wer Disziplin 	mit Freude verbindet, fühlt sich hier gut aufgehoben.
+                        </p><br>
+                        <a href="mailto:ianeta.dilova@t-online.de" class="contact-btn">Kontakt aufnehmen</a>
+                    </div>
+                </div>
+
+                <div class="school-card">
+                    <div class="school-header">
+                        <h3 class="school-name"><span style="font-size: 32px;">🥉</span> Platz 3<br>Ballett- und Tanzschule Anastasia</h3>
+                        <div class="school-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span>4.4 (26 Bewertungen)</span>
+                        </div>
+                    </div>
+                    <div class="school-body">
+                        <div class="school-info">
+                            <div class="info-row">
+                                <div class="info-icon">📍</div>
+                                <span>Ohmstraße 44, 60486 Frankfurt</span>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-icon">📞</div>
+                                <span>+49 69 15619767</span>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-icon">🌐</div>
+                                <span><a href="http://www.ballett-und-tanzschule-anastasia.com" rel="nofollow" target="_blank" style="color: black;">Website</a></span>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-icon">🎯</div>
+                                <span>Breites Kursangebot</span>
+                            </div>
+                        </div>
+                        <div class="price-badge">Ab 50 €/Monat</div>
+                        <p style="margin: 15px 0; color: #666; line-height: 1.6;">
+                            Vielseitige Tanzschule mit Fokus auf klassisches Ballett. Bietet auch zeitgenössischen Tanz und kreative Bewegung für Kinder.
+	Eltern loben besonders die fachliche Kompetenz und pädagogische Hingabe der Lehrkräfte. Ein häufig genannter Punkt ist die individuelle Förderung 	der Kinder, die nicht nur tänzerisch, sondern auch in ihrer Persönlichkeit wachsen. Die Atmosphäre im Studio wird als freundlich, familiär und 	unterstützend beschrieben. Viele Eltern betonen, dass ihre Kinder mit großer Freude und Vorfreude zum Unterricht gehen.
+	<br><br>
+	Einige Eltern heben hervor, dass ihre Kinder durch den Unterricht nicht nur tänzerisch, sondern auch in ihrem Selbstvertrauen und ihrer Kreativität 	gestärkt wurden. Die regelmäßigen Aufführungen und kleinen Bühnenprojekte tragen zusätzlich zur positiven Entwicklung der Kinder bei.
+                        </p>
+                        <a href="mailto:info@ballett-und-tanzschule-anastasia.com" class="contact-btn">Kontakt aufnehmen</a>
+                    </div>
+                </div>
+
+                <div class="school-card">
+                    <div class="school-header">
+                        <h3 class="school-name"><span style="font-size: 32px;">4.</span><br>Tanzstudio Balzer</h3>
+                        <div class="school-rating">
+                            <span class="stars">★★★★★</span>
+                            <span>4.7 (15 Bewertungen)</span>
+                        </div>
+                    </div>
+                    <div class="school-body">
+                        <div class="school-info">
+                            <div class="info-row">
+                                <div class="info-icon">📍</div>
+                                <span>Gartenstr. 84, 60596 Frankfurt</span>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-icon">📞</div>
+                                <span>+49 69 624798</span>
+                            </div>
+                            <div class="info-row">
+                                 <div class="info-icon">🌐</div>
+                                <span><a href="https://www.ballett-tanzstudio-balzer.de/" rel="nofollow" target="_blank" style="color: black;">Website</a></span>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-icon">🎯</div>
+                                <span>Alle Altersgruppen</span>
+                            </div>
+                        </div>
+                        <div class="price-badge">Ab 44 €/Monat</div>
+                        <p style="margin: 15px 0; color: #666; line-height: 1.6;">
+                            Traditionelle Ballettschule mit familiärer Atmosphäre. Spezialisiert auf klassisches Ballett und moderne Tanztechniken.<br>
+	Das Ballett- und Tanzstudio Balzer in Frankfurt wird in den verfügbaren Bewertungen positiv wahrgenommen. Besonders hervorgehoben werden die 	fachliche Kompetenz und pädagogische Hingabe der Lehrkräfte. Einige Schüler berichten von einer individuellen Förderung und einer freundlichen 	Atmosphäre im Studio.<br><br> Die Schule legt Wert auf eine traditionsreiche Ausbildung und bietet ein vielfältiges Kursangebot, das unter anderem 	klassisches Ballett, Flamenco und Modern umfasst. <br>Insgesamt wird das Studio als ein Ort beschrieben, an dem Schüler mit Leidenschaft und 	Professionalität in die Welt des Tanzes eingeführt werden.
+                        </p>
+                        <a href="mailto:kontakt@ballett-tanzstudio-balzer.de" class="contact-btn">Kontakt aufnehmen</a>
+                    </div>
+                </div>
+
+                <div class="school-card">
+                    <div class="school-header">
+                        <h3 class="school-name">5.<br>Do-Ballet Frankfurt</h3>
+                        <div class="school-rating">
+                            <span class="stars">★★★★★</span>
+                            <span>5.0 (11 Bewertungen)</span>
+                        </div>
+                    </div>
+                    <div class="school-body">
+                        <div class="school-info">
+                            <div class="info-row">
+                                <div class="info-icon">📍</div>
+                                <span>Leipziger Straße 17a, 60487 Frankfurt</span>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-icon">📞</div>
+                                <span>+49 176 438 69386</span>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-icon">🌐</div>
+                                <span><a href="https://do-ballet.com/" rel="nofollow" target="_blank" style="color: black;">Website</a></span>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-icon">🎯</div>
+                                <span>Kinder & Erwachsene</span>
+                            </div>
+                        </div>
+                        <div class="price-badge">Ab 49 €/Monat</div>
+                        <p style="margin: 15px 0; color: #666; line-height: 1.6;">
+                            Moderne Ballettschule mit innovativen Unterrichtsmethoden. Persönliche Betreuung und individuelle Förderung stehen im 	Mittelpunkt.<br><br>Eltern loben besonders die fachliche Kompetenz und pädagogische Hingabe der Lehrkräfte. Ein häufig genannter Punkt ist die 	individuelle Förderung der Kinder, die nicht nur tänzerisch, sondern auch in ihrer Persönlichkeit wachsen. Die Atmosphäre im Studio wird als 	freundlich, familiär und unterstützend beschrieben. Viele Eltern betonen, dass ihre Kinder mit großer Freude und Vorfreude zum Unterricht gehen.
+	<br><br>
+	Insgesamt wird die Ballettschule DO-ballet als ein Ort beschrieben, an dem Kinder mit Leidenschaft und Professionalität in die Welt des Balletts 	eingeführt werden. Eltern empfehlen die Schule daher uneingeschränkt weiter.
+                        </p>
+                        <a href="mailto:daria@do-ballet.com" class="contact-btn">Kontakt aufnehmen</a>
+                    </div>
+                </div>
+
+                <div class="school-card">
+                    <div class="school-header">
+                        <h3 class="school-name">6.<br>Kinderballett Frankfurt</h3>
+                        <div class="school-rating">
+                            <span class="stars">★★★★★</span>
+                            <span>4.7 (7 Bewertungen)</span>
+                        </div>
+                    </div>
+                    <div class="school-body">
+                        <div class="school-info">
+                            <div class="info-row">
+                                <div class="info-icon">📍</div>
+                                <span>Hartmann-Ibach-Straße 108, 60389 Frankfurt</span>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-icon">📞</div>
+                                <span>+49 69 15345257</span>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-icon">🌐</div>
+                                <span><a href="https://kinderballett-frankfurt.de/" target="_blank" style="color: black;">Website</a> </span>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-icon">🎯</div>
+                                <span>🌟 Spezialist für Kinderballett</span>
+                            </div>
+                        </div>
+                        <div class="price-badge">Ab 45 €/Monat</div>
+                        <p style="margin: 15px 0; color: #666; line-height: 1.6;">
+                            <strong>🎭 DER Spezialist für Kinderballett!</strong> Professionelle, kindgerechte Ballettausbildung mit spielerischen 	Elementen. Perfekt für die ersten Schritte im klassischen Ballett.<br><br>
+Kinderballett Frankfurt, unter der Leitung von Olga Leibrandt, erhält durchweg begeisterte Rückmeldungen von Eltern und Schülern. Die Schule zeichnet sich durch ihre herzliche Atmosphäre, individuelle Förderung und kreative Choreografien aus. Eltern berichten von einer ganzheitlichen Entwicklung ihrer Kinder, die nicht nur tänzerisch, sondern auch in ihrem Selbstvertrauen und ihrer Kreativität gestärkt wurden. <br>Die regelmäßigen Aufführungen und kleinen Bühnenprojekte tragen zusätzlich zur positiven Entwicklung der Kinder bei. Die fairen Vertragsbedingungen und die Möglichkeit, eine kostenlose Probestunde zu absolvieren, werden ebenfalls positiv hervorgehoben.                        </p>
+                        <a href="mailto:ol@kinderballett-frankfurt.de" class="contact-btn">Kontakt aufnehmen</a>
+                    </div>
+                </div>
+
+                <div class="school-card">
+                    <div class="school-header">
+                        <h3 class="school-name">7.<br>Tanzstudio Constanza</h3>
+                        <div class="school-rating">
+                            <span class="stars">★★★★★</span>
+                            <span>5.0 (6 Bewertungen)</span>
+                        </div>
+                    </div>
+                    <div class="school-body">
+                        <div class="school-info">
+                            <div class="info-row">
+                                <div class="info-icon">📍</div>
+                                <span>Pfingstweidstraße 4, 60316 Frankfurt</span>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-icon">📞</div>
+                                <span>+49 174 4602786</span>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-icon">🌐</div>
+                                <span><a href="http://tanzstudio-constanza.de" rel="nofollow" target="_blank" style="color: black;">Website</a></span>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-icon">🎯</div>
+                                <span>Kreativer Tanz & Ballett</span>
+                            </div>
+                        </div>
+                        <div class="price-badge">Ab 50 €/Monat</div>
+                        <p style="margin: 15px 0; color: #666; line-height: 1.6;">
+                            Kreatives Tanzstudio mit Schwerpunkt auf künstlerischer Entwicklung. Kombiniert klassisches Ballett mit modernen Elementen.
+                        </p>
+                        <a href="mailto:info@tanzstudio-constanza.de" class="contact-btn">Kontakt aufnehmen</a>
+                    </div>
+                </div>
+
+                <div class="school-card">
+                    <div class="school-header">
+                        <h3 class="school-name">8.<br>Ballett im Hof</h3>
+                        <div class="school-rating">
+                            <span class="stars">★★★★★</span>
+                            <span>4.8 (4 Bewertungen)</span>
+                        </div>
+                    </div>
+                    <div class="school-body">
+                        <div class="school-info">
+                            <div class="info-row">
+                                <div class="info-icon">📍</div>
+                                <span>Westerbachstraße 50, 60489 Frankfurt</span>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-icon">📞</div>
+                                <span>+49 69 307368</span>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-icon">🌐</div>
+                                <span><a href="https://www.ballett-im-hof.de/" rel="nofollow" target="_blank" style="color: black;">Website</a></span>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-icon">🎯</div>
+                                <span>Traditionelles Ballett</span>
+                            </div>
+                        </div>
+                        <div class="price-badge">Ab 44 €/Monat</div>
+                        <p style="margin: 15px 0; color: #666; line-height: 1.6;">
+                            Charmante Ballettschule in historischem Ambiente. Bietet klassischen Ballettunterricht in familiärer Atmosphäre.
+                        </p>
+                        <a href="mailto:ballettimhof@gmx.de" class="contact-btn">Kontakt aufnehmen</a>
+                    </div>
+                </div>
+
+                <div class="school-card">
+                    <div class="school-header">
+                        <h3 class="school-name">9.<br>Frankfurt City Ballet</h3>
+                        <div class="school-rating">
+                            <span class="stars">★★★★★</span>
+                            <span>5.0 (3 Bewertungen)</span>
+                        </div>
+                    </div>
+                    <div class="school-body">
+                        <div class="school-info">
+                            <div class="info-row">
+                                <div class="info-icon">📍</div>
+                                <span>Kurfürstenstraße 60, 60486 Frankfurt</span>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-icon">📞</div>
+                                <span>+49 176 80331708</span>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-icon">🌐</div>
+                                <span><a href="https://www.frankfurtcityballet.de" rel="nofollow" target="_blank" style="color: black;">Website</a></span>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-icon">🎯</div>
+                                <span>Professionelles Training</span>
+                            </div>
+                        </div>
+                        <div class="price-badge">Ab 45 €/Monat</div>
+                        <p style="margin: 15px 0; color: #666; line-height: 1.6;">
+                            Hochqualifizierte Ballettschule für ambitionierte Tänzer. Bietet sowohl Freizeitkurse als auch Pre-Professional Training.
+                        </p>
+                        <a href="mailto:info@frankfurtcityballet.de" class="contact-btn">Kontakt aufnehmen</a>
+                    </div>
+                </div>
+
+                <div class="school-card">
+                    <div class="school-header">
+                        <h3 class="school-name">10.<br>Ballet Boutique</h3>
+                        <div class="school-rating">
+                            <span class="stars">★★★★★</span>
+                            <span>5.0 (2 Bewertungen)</span>
+                        </div>
+                    </div>
+                    <div class="school-body">
+                        <div class="school-info">
+                            <div class="info-row">
+                                <div class="info-icon">📍</div>
+                                <span>Adickesallee 43, 60322 Frankfurt</span>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-icon">📞</div>
+                                <span>+49 69 98972759</span>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-icon">🌐</div>
+                                <span><a href="https://balletboutique.de/" rel="nofollow" target="_blank" style="color: black;">Website</a></span>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-icon">🎯</div>
+                                <span>Exklusives Ballett</span>
+                            </div>
+                        </div>
+                        <div class="price-badge">Ab 69 €/Monat</div>
+                        <p style="margin: 15px 0; color: #666; line-height: 1.6;">
+                            Exklusive Ballettschule mit kleinen Klassen und individueller Betreuung. Premium-Ballettausbildung in eleganter Atmosphäre.
+                        </p>
+                        <a href="mailto:info@balletboutique.de" class="contact-btn">Kontakt aufnehmen</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="content-section Karte"><br>
+            <h2 class="section-title">Lage der besprochenen Ballettschulen in Frankfurt</h2>
+<p>Klick auf die blauen Pins um den Namen der Ballettschule herauszufinden</p>
+<div id="map"></div></div>
+</section>
 
     <script>
         var map = L.map('map').setView([50.1109, 8.6821], 12);
@@ -303,7 +882,142 @@ Stand 26.08.2025    </div>
                 .bindPopup(`<b>${school.name}</b>`);
         });
     </script>
-<br><br><br>
+
+        <section class="content-section faq-section">
+            <h2 class="section-title">Häufig gestellte Fragen</h2>
+            
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    Welche Ballettschule ist am besten für Anfänger geeignet?
+                    <span class="faq-arrow">▼</span>
+                </button>
+                <div class="faq-answer">
+                    Für Anfänger empfehlen wir besonders das <strong><a href="https://www.ballettstudio-ost.de/" target="_blank"  style="color: black; text-decoration: none;">Ballettstudio Ost</a></strong> und <strong>Do-Ballet Frankfurt</strong>. Beide Schulen haben ausgezeichnete Bewertungen (5.0 Sterne) und bieten spezielle Anfängerkurse mit geduldigen, erfahrenen Lehrkräften. Das Ballettstudio Ost punktet mit 82 positiven Bewertungen und langjähriger Erfahrung, während Do-Ballet Frankfurt durch moderne Unterrichtsmethoden und persönliche Betreuung überzeugt.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    Ab welchem Alter können Kinder mit Ballett beginnen?
+                    <span class="faq-arrow">▼</span>
+                </button>
+                <div class="faq-answer">
+                    Die meisten Ballettschulen in Frankfurt bieten Kurse ab 4 Jahren an. <strong><a href="https://kinderballett-frankfurt.de/" target="_blank" style="color: black;  text-decoration: none;">Kinderballett Frankfurt</a></strong> ist hier der absolute Spezialist und bietet altersgerechte Programme für die Kleinsten. Bereits ab 4 Jahren können Kinder spielerisch an Musik und Bewegung herangeführt werden. Für Kinder ab 5-6 Jahren gibt es dann strukturierteren Ballettunterricht mit ersten technischen Grundlagen.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    Wie viel kostet Ballettunterricht in Frankfurt?
+                    <span class="faq-arrow">▼</span>
+                </button>
+                <div class="faq-answer">
+                    Die Preise variieren zwischen <strong>44€ und 69€ pro Monat</strong>. Die günstigsten Optionen bieten das <strong>Tanzstudio Balzer</strong> und <strong>Ballett im Hof</strong> (ab 44€/Monat). Im mittleren Preissegment liegen Schulen wie <strong>Kinderballett Frankfurt</strong> und die <strong>Ballettschule Janeta Dilova</strong> (ab 45€/Monat). Etwas teurer mit 50€ pro Monat ist das <strong><a href="https://www.ballettstudio-ost.de/ballett-erwachsene.php" target="_blank"  style="color: black; text-decoration: none;">Ballettstudio Ost</a></strong>. Premium-Angebote wie <strong>Ballet Boutique</strong> kosten ab 69€/Monat. Die meisten Schulen bieten auch Probestunden oder Schnupperkurse an.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    Brauche ich spezielle Ausrüstung für den Ballettunterricht?
+                    <span class="faq-arrow">▼</span>
+                </button>
+                <div class="faq-answer">
+                    Für den Anfang genügen <strong>bequeme, bewegungsfreie Kleidung</strong> und <strong>Ballettschuhe oder rutschfeste Socken</strong>. Später werden Ballettschläppchen aus Leder oder Stoff empfohlen. Für Kinder reichen oft Leggings und T-Shirt, für Erwachsene sind Leggings/Strumpfhose und ein anliegendes Oberteil ideal. Die meisten Schulen beraten gerne bei der Auswahl der richtigen Ausrüstung und haben oft Kooperationen mit Tanzausstattern.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    Gibt es auch Ballettunterricht für Erwachsene?
+                    <span class="faq-arrow">▼</span>
+                </button>
+                <div class="faq-answer">
+                    Ja! Fast alle Schulen in unserer Liste bieten <strong>Erwachsenenkurse</strong> an. Besonders empfehlenswert sind das <strong><a href="https://www.ballettstudio-ost.de/ballett-erwachsene.php" target="_blank"  style="color: black; text-decoration: none;">Ballettstudio Ost</a></strong>, <strong>Do-Ballet Frankfurt</strong> und das <strong>Tanzstudio Balzer</strong> für erwachsene Anfänger. Diese Schulen haben spezielle Anfängerkurse für Erwachsene, die noch nie Ballett gemacht haben, sowie Kurse für Wiedereinsteiger. Der Unterricht ist an die Bedürfnisse erwachsener Lernender angepasst.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    Welche Ballettmethodik wird in Frankfurt unterrichtet?
+                    <span class="faq-arrow">▼</span>
+                </button>
+                <div class="faq-answer">
+                    Die meisten Schulen unterrichten nach der <strong>klassischen europäischen Ballettmethodik</strong>. <strong>Ballettschule Janeta Dilova</strong> oder <strong><a href="https://www.ballettstudio-ost.de/ballett-erwachsene.php" target="_blank"  style="color: black; text-decoration: none;">Ballettstudio Ost</a></strong> spezialisieren sich auf die <strong>russische Waganowa-Methode</strong>, die für ihre systematische und technisch fundierte Herangehensweise bekannt ist. Andere Schulen kombinieren verschiedene Methoden und integrieren auch moderne Elemente in den klassischen Ballettunterricht.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    Wie finde ich die richtige Ballettschule für mein Kind?
+                    <span class="faq-arrow">▼</span>
+                </button>
+                <div class="faq-answer">
+                    Wichtige Faktoren sind: <strong>Qualifikation der Lehrkräfte</strong>, <strong>altersgerechte Kursstruktur</strong>, <strong>Atmosphäre im Studio</strong> und <strong>Erreichbarkeit</strong>.  <br><strong><a href="https://kinderballett-frankfurt.de/" target="_blank" style="color: black;  text-decoration: none;">Kinderballett Frankfurt</a></strong> ist speziell auf Kinder ausgerichtet. Nutzen Sie Probestunden, um die Atmosphäre zu testen. Achten Sie darauf, dass der Unterricht spielerisch aufgebaut ist und Ihr Kind Spaß an der Bewegung entwickelt, bevor technische Perfektion im Vordergrund steht.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    Wie oft sollte man als Anfänger Ballettunterricht nehmen?
+                    <span class="faq-arrow">▼</span>
+                </button>
+                <div class="faq-answer">
+                    Für <strong>Anfänger</strong> ist <strong>1-2 Mal pro Woche</strong> ideal. Dies ermöglicht es, die Grundlagen zu erlernen, ohne überfordert zu werden. Für <strong>Kinder</strong> reicht oft eine Stunde pro Woche, um spielerisch an das Ballett herangeführt zu werden. <strong>Fortgeschrittene</strong> trainieren meist 3-4 Mal pro Woche. Die meisten Frankfurter Ballettschulen bieten flexible Kursmodelle an, sodass Sie mit weniger Stunden beginnen und bei Gefallen aufstocken können.
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="mailto:info@ballettschulen-frankfurt.com">Kontakt</a>
+                <a href="#datenschutz">Datenschutz</a>
+                <a href="#impressum">Impressum</a>
+            </div>
+            <p>&copy; 2025 Ballettschulen Frankfurt Guide. Alle Informationen ohne Gewähr.</p>
+            <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.8;">
+                Letzte Aktualisierung: September 2025 | Bewertungen und Preise können sich ändern
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFaq(button) {
+            const answer = button.nextElementSibling;
+            const arrow = button.querySelector('.faq-arrow');
+            const isOpen = answer.classList.contains('open');
+            
+            // Close all FAQ answers
+            document.querySelectorAll('.faq-answer').forEach(item => {
+                item.classList.remove('open');
+            });
+            
+            // Reset all arrows
+            document.querySelectorAll('.faq-arrow').forEach(arr => {
+                arr.style.transform = 'rotate(0deg)';
+            });
+            
+            // Open clicked FAQ if it wasn't open
+            if (!isOpen) {
+                answer.classList.add('open');
+                arrow.style.transform = 'rotate(180deg)';
+            }
+        }
+        
+        // Add some entrance animations
+        window.addEventListener('load', function() {
+            const cards = document.querySelectorAll('.school-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    card.style.transition = 'all 0.6s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
+    </script>
 </body>
 </html>
-
