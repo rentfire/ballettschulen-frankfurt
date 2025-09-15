@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressum & Datenschutz - Ballettschulen Frankfurt Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            min-height: 100vh;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 40px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        .nav-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .nav-tab {
+            padding: 15px 30px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            color: #666;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .nav-tab.active {
+            color: #333;
+            border-bottom-color: #007bff;
+        }
+
+        .nav-tab:hover {
+            color: #007bff;
+        }
+
+        .content {
+            display: none;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .content.active {
+            display: block;
+        }
+
+        .content h2 {
+            color: #333;
+            margin: 30px 0 20px 0;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+
+        .content h3 {
+            color: #555;
+            margin: 25px 0 15px 0;
+            font-size: 1.4rem;
+        }
+
+        .content p {
+            margin-bottom: 15px;
+            text-align: justify;
+            line-height: 1.7;
+        }
+
+        .content ul {
+            margin: 15px 0 15px 20px;
+        }
+
+        .content li {
+            margin-bottom: 8px;
+        }
+
+        .contact-box {
+            background: #f8f9fa;
+            padding: 20px;
+            border-left: 4px solid #007bff;
+            margin: 20px 0;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .contact-box strong {
+            color: #007bff;
+        }
+
+        .placeholder {
+            background: #fff3cd;
+            color: #856404;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-style: italic;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid #eee;
+            color: #666;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 12px 24px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .nav-tabs {
+                flex-direction: column;
+            }
+
+            .nav-tab {
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+                border-right: none;
+            }
+
+            .nav-tab.active {
+                border-bottom-color: #007bff;
+                border-right-color: transparent;
+            }
+
+            .content {
+                padding: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Rechtliche Hinweise</h1>
+            <p>Ballettschulen Frankfurt Guide</p>
+        </div>
+
+        <div class="nav-tabs">
+            <button class="nav-tab active" onclick="showTab('impressum', this)">Impressum</button>
+            <button class="nav-tab" onclick="showTab('datenschutz', this)">Datenschutzerklärung</button>
+        </div>
+
+        <!-- Impressum Tab -->
+        <div id="impressum" class="content active">
+            <h2>Impressum</h2>
+            
+            <h3>Angaben gemäß § 5 TMG</h3>
+            <div class="contact-box">
+                <strong>Verantwortlich für den Inhalt:</strong><br>
+                Ballettschulen Frankfurt Guide<br>
+                Caroline Dellinger<br>
+                Albusstraße 37<br>
+                60598 Frankfurt am Main
+            </div>
+
+            <div class="contact-box">
+                <strong>Kontakt:</strong><br>
+                E-Mail: info@ballettschulen-frankfurt.onrender.com<br>
+                Telefon: <span class="placeholder">069-5673389</span> (optional)
+            </div>
+
+            <div class="contact-box">
+                <strong>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</strong><br>
+                Caroline Dellinger<br>
+                Albusstraße 37<br>
+                60598 Frankfurt am Main
+            </div>
+
+            <h2>Haftungsausschluss</h2>
+
+            <h3>Haftung für Inhalte</h3>
+            <p>Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.</p>
+
+            <h3>Haftung für Links</h3>
+            <p>Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.</p>
+
+            <h3>Urheberrecht</h3>
+            <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.</p>
+        </div>
+
+        <!-- Datenschutz Tab -->
+        <div id="datenschutz" class="content">
+            <h2>Datenschutzerklärung</h2>
+
+            <h3>1. Datenschutz auf einen Blick</h3>
+
+            <h3>Allgemeine Hinweise</h3>
+            <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie unsere Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.</p>
+
+            <h3>Datenerfassung auf unserer Website</h3>
+            <p><strong>Wer ist verantwortlich für die Datenerfassung auf dieser Website?</strong><br>
+            Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Impressum dieser Website entnehmen.</p>
+
+            <p><strong>Wie erfassen wir Ihre Daten?</strong><br>
+            Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z.B. um Daten handeln, die Sie in ein Kontaktformular eingeben. Andere Daten werden automatisch beim Besuch der Website durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten (z.B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs).</p>
+
+            <h2>2. Allgemeine Hinweise und Pflichtinformationen</h2>
+
+            <h3>Datenschutz</h3>
+            <p>Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzbestimmungen sowie dieser Datenschutzerklärung.</p>
+
+            <h3>Hinweis zur verantwortlichen Stelle</h3>
+            <div class="contact-box">
+                <strong>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</strong><br><br>
+                <span class="placeholder">[Ihr vollständiger Name]</span><br>
+                <span class="placeholder">[Ihre Adresse]</span><br>
+                <span class="placeholder">[PLZ Ort]</span><br>
+                E-Mail: <span class="placeholder">[Ihre E-Mail-Adresse]</span>
+            </div>
+
+            <h2>3. Datenerfassung auf unserer Website</h2>
+
+            <h3>Server-Log-Dateien</h3>
+            <p>Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten Server-Log-Dateien, die Ihr Browser automatisch an uns übermittelt. Dies sind:</p>
+            <ul>
+                <li>Browsertyp und Browserversion</li>
+                <li>Verwendetes Betriebssystem</li>
+                <li>Referrer URL</li>
+                <li>Hostname des zugreifenden Rechners</li>
+                <li>Uhrzeit der Serveranfrage</li>
+                <li>IP-Adresse</li>
+            </ul>
+            <p>Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen. Die Erfassung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO.</p>
+
+            <h3>Hosting</h3>
+            <p>Diese Website wird extern gehostet. Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf den Servern des Hosters gespeichert. Hierbei kann es sich v. a. um IP-Adressen, Kontaktanfragen, Meta- und Kommunikationsdaten, Vertragsdaten, Kontaktdaten, Namen, Websitezugriffe und sonstige Daten, die über eine Website generiert werden, handeln.</p>
+            <p>Das externe Hosting erfolgt zum Zwecke der Vertragserfüllung gegenüber unseren potenziellen und bestehenden Kunden (Art. 6 Abs. 1 lit. b DSGVO) und im Interesse einer sicheren, schnellen und effizienten Bereitstellung unseres Online-Angebots durch einen professionellen Anbieter (Art. 6 Abs. 1 lit. f DSGVO).</p>
+
+            <h2>4. Ihre Rechte</h2>
+            <p>Sie haben folgende Rechte:</p>
+            <ul>
+                <li>Recht auf Auskunft (Art. 15 DSGVO)</li>
+                <li>Recht auf Berichtigung (Art. 16 DSGVO)</li>
+                <li>Recht auf Löschung (Art. 17 DSGVO)</li>
+                <li>Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
+                <li>Recht auf Datenübertragbarkeit (Art. 20 DSGVO)</li>
+                <li>Widerspruchsrecht (Art. 21 DSGVO)</li>
+                <li>Recht auf Beschwerde bei einer Aufsichtsbehörde (Art. 77 DSGVO)</li>
+            </ul>
+
+            <h2>5. Externe Links und Inhalte</h2>
+
+            <h3>Verlinkung zu Ballettschulen</h3>
+            <p>Diese Website enthält Links zu externen Websites verschiedener Ballettschulen in Frankfurt. Wir haben keinen Einfluss auf deren Datenschutzpraktiken. Beim Besuch verlinkter Websites gelten die jeweiligen Datenschutzerklärungen der entsprechenden Anbieter.</p>
+
+            <h3>OpenStreetMap (Leaflet)</h3>
+            <p>Diese Website verwendet Leaflet mit Kartenmaterial von OpenStreetMap. OpenStreetMap ist ein freies Projekt zur Erstellung einer freien Weltkarte. Die Karten werden von der OpenStreetMap Foundation (St John's Innovation Centre, Cowley Road, Cambridge, CB4 0WS, United Kingdom) bereitgestellt.</p>
+            
+            <p>Beim Laden der Karten werden folgende Daten an die Server der OpenStreetMap Foundation übertragen:</p>
+            <ul>
+                <li>Ihre IP-Adresse</li>
+                <li>Browserinformationen</li>
+                <li>Informationen über die angeforderten Kartenbereiche</li>
+            </ul>
+            <p>Die Datenverarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Bereitstellung einer interaktiven Karte). Weitere Informationen zum Datenschutz bei OpenStreetMap finden Sie in der Datenschutzerklärung der OpenStreetMap Foundation: <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy" target="_blank" rel="noopener noreferrer">https://wiki.osmfoundation.org/wiki/Privacy_Policy</a></p>
+
+            <h2>6. Kontakt</h2>
+            <div class="contact-box">
+                <strong>Bei Fragen zum Datenschutz wenden Sie sich bitte an:</strong><br>
+                E-Mail: <span class="placeholder">info@ballettschulen-frankfurt.onrender.com</span>
+            </div>
+        </div>
+
+
+        <div class="footer">
+            <a href="msilto:https://ballettschulen-frankfurt.onrender.com/" class="back-link">← Zurück zur Hauptseite</a>
+            <p><strong>Stand:</strong> <span class="placeholder">15.09.2025</span></p>
+            <p><strong>© 2025 Ballettschulen Frankfurt Guide. Alle Rechte vorbehalten.</strong></p>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabId, buttonElement) {
+            // Hide all content tabs
+            const contents = document.querySelectorAll('.content');
+            contents.forEach(content => content.classList.remove('active'));
+            
+            // Remove active class from all tab buttons
+            const buttons = document.querySelectorAll('.nav-tab');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            // Show selected content tab
+            document.getElementById(tabId).classList.add('active');
+            
+            // Add active class to clicked button
+            buttonElement.classList.add('active');
+            
+            // Update URL hash without scrolling
+            history.pushState(null, null, '#' + tabId);
+        }
+
+        // Handle direct links with hash
+        window.addEventListener('DOMContentLoaded', function() {
+            const hash = window.location.hash.substring(1);
+            if (hash === 'datenschutz') {
+                const datenschutzTab = document.querySelector('[onclick*="datenschutz"]');
+                showTab('datenschutz', datenschutzTab);
+            }
+        });
+
+        // Handle back/forward browser navigation
+        window.addEventListener('popstate', function() {
+            const hash = window.location.hash.substring(1);
+            if (hash === 'datenschutz') {
+                const datenschutzTab = document.querySelector('[onclick*="datenschutz"]');
+                showTab('datenschutz', datenschutzTab);
+            } else {
+                const impressumTab = document.querySelector('[onclick*="impressum"]');
+                showTab('impressum', impressumTab);
+            }
+        });
+    </script>
+</body>
+</html>
